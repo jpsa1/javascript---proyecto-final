@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Boostrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Proyecto Final - Milanese</title>
+
+</head>
+<body>
+    <!-- ************* HEADER ************* -->
+    <header>
+
+    </header>
+    
+    <!-- ************* MAIN ************* -->
+    <main>
+      <section id="ID-caja-principal" class="caja-principal estiloCajas">    
+        <div class="caja-titulos">
+          <h1>CARRITO DE COMPRAS</h1>
+          <img class="animate__animated animate__bounce" src="./Imagenes/imagen-carrito.png" alt="imagen de logo">
+        </div>
+        
+        <div id="ID-cajaIngresoDatos" class="cajaIngresoDatos estiloCajas animate__animated animate__zoomIn">
+          <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="textNombre" aria-describedby="emailHelp" placeholder="Nombre de producto">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="textDescripcion" placeholder="Agregue una Descripcion">
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" id="textPrecio" placeholder="Agregue un precio">
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" id="textStock" placeholder="Agregue el stock">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="linkImagen" placeholder="Agregue el link de la imagen">
+              </div>
+              <button type="submit" class="btn btn-primary estiloCajas" id="btn-agregar">AGREGAR</button>
+              <button type="submit" class="btn btn-primary estiloCajas" id="btn-cancelar">CANCELAR</button>
+            </form>
+        </div>
+        
+        <!-- BOTONES -->
+        
+        <div class="caja-btn estiloCajas">
+          <button type="submit" class="btn btn-light estiloCajas" id="btn-agregarProducto">AGREGAR PRODUCTO</button>
+          <button type="submit" class="btn btn-light estiloCajas" id="btn-eliminarProductos">ELIMINAR PRODUCTOS</button>
+          <button type="submit" class="btn btn-light estiloCajas" id="btn-eliminarTodos">ELIMINAR TODOS</button>          
+          <!-- Icono carrito vacio -->
+          <i class="bi bi-basket"></i>
+          <!-- Icono carrito lleno -->
+          <i class="bi bi-basket-fill position-relative">
+              <span id="carrito-cantidad" class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-secondary">1</span>
+          </i>
+
+          <!-- Hay que eliminar -->
+          <button style="display: none;" type="submit" class="btn btn-primary estiloCajas" id="btn-listarProductos">LISTAR PRODUCTOS</button>
+                <!-- Hay que eliminar -->
+          <button style="display: none;" type="submit" class="btn btn-primary estiloCajas" id="btn-agregarCarrito">AGREGAR AL CARRITO</button>
+                <!-- Hay que eliminar -->
+          <button style="display: none;" type="submit" class="btn btn-primary estiloCajas" id="btn-listarCarrito">LISTAR CARRITO</button>
+                <!-- Hay que eliminar -->
+          <button style="display: none;" type="submit" class="btn btn-primary estiloCajas" id="btn-eliminarItemCarrito">ELIMINAR ITEM CARRITO</button>
+
+        </div>
+      
+
+        <!-- **** CARRITO **** -->
+
+        <div class="carrito animate__animated animate__bounceInRight">
+          
+          <button type="button" class="btn-close" aria-label="Cerrar">X</button>
+
+          <h4>CARRITO</h4>
+          
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cant.</th>
+                <!-- <th scope="col">Descripción</th> -->
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody id="items">
+            </tbody>
+          </table>
+
+          <div>
+            <h4 class="totalCarrito" >TOTAL CARRITO: $ 0</h4>
+          </div>
+
+          <button type="submit" class="btn btn-primary estiloCajas" id="btn-comprarCarrito">COMPRAR</button>
+          <button type="submit" class="btn btn btn-danger estiloCajas" id="btn-vaciarCarrito">VACIAR CARRITO</button>
+
+        </div>
+
+        <!-- Tienda -->
+        <div id="id-tienda" class="tienda">
+          <!-- <div class="tienda__cajaProductos">
+            <img class="tienda__cajaProductos__img" src="./Imagenes/Lechuga.png" alt="Lechuga">
+            <h4>Lechuga</h4>
+            <h5>Stock</h5>
+            <p>Repollada</p>
+            <button>Agregar</button>
+          </div> --> 
+        </div>
+      
+      </section>
+
+    </main>
+
+    <!-- ************* FOOTER ************* -->
+    <footer>
+      <div class="copyright">
+        <h5>Construido por: Juan Pablo Milanese</h5>
+
+      </div>
+    </footer>
+    
+
+ 
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/constructor.js"></script>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/eventos.js"></script>
+    <script src="./js/visibilidad.js"></script>
+    <script src="./js/controlBotones.js"></script>
+    <script src="./js/sweetAlert.js"></script>
+    <script src="./js/nuevaFuncion.js"></script>
+    <script src="./js/apirest.js"></script>
+    <script src="./js/app.js"></script>
+ 
+
+    
+    <!-- BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  </body>
+</html>
