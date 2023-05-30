@@ -2,7 +2,6 @@
 
 body{
     background-color: #364461;
-    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
     font-family: 'Times New Roman', Times, serif
 }
 
@@ -142,6 +141,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
     max-width: 300px;
 
@@ -171,8 +171,8 @@ main {
 }
 
 .tienda__cajaProductos__img {
-    height: 290px;
-    width: 290px;
+    height: 270px;
+    width: 270px;
     margin-bottom: 5px;
     border: 1px solid black;
 }

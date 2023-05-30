@@ -90,10 +90,8 @@ function eventoEliminarProductos(evento) {
     
     cajaProductos = Array.from(cajaProductos)
 
-    console.log(elementoSeleccionado)
     elementoSeleccionado = cajaProductos.find(element => element.style.borderWidth == '3.5px');
 
-    console.log(elementoSeleccionado)
     eliminarProductos(productos, "productos", elementoSeleccionado)
 
     //Vuelve a listar los productos para que se actualice la lista
@@ -151,36 +149,22 @@ function eventoEliminarTodos(evento) {
 
 // **** 5 - LISTAR CARRITO ****
 
-let btnlistarCarrito = document.querySelector("#btn-listarCarrito")
-btnlistarCarrito.addEventListener("click", eventoListarCarrito)
+// let btnlistarCarrito = document.querySelector("#btn-listarCarrito")
+// btnlistarCarrito.addEventListener("click", eventoListarCarrito)
 
-function eventoListarCarrito(evento) {
-    evento.preventDefault()
-
-    listarCarrito()
-
-    controlBotones()
-
-}
-
-
-// **** 6 - ELIMINAR ITEM CARRITO ****
-
-// document.querySelector("#btn-eliminarItemCarrito").addEventListener("click", eventoEliminarItemCarrito)
-
-// function eventoEliminarItemCarrito(evento) {
+// function eventoListarCarrito(evento) {
 //     evento.preventDefault()
 
-//     let elementoSeleccionado = document.querySelector("#selectorItem").selectedIndex
-
-//     eliminarItemCarrito(elementoSeleccionado)
+//     listarCarrito()
 
 //     controlBotones()
 
 // }
 
 
-// **** 7 - VACIAR CARRITO ****
+
+
+// **** 6 - VACIAR CARRITO ****
 
 let btnVaciarCarrito = document.querySelector("#btn-vaciarCarrito")
 btnVaciarCarrito.addEventListener("click", eventoVaciarCarrito)
@@ -195,6 +179,19 @@ function eventoVaciarCarrito(evento) {
 
     controlBotones()
 
+}
+
+// **** 7 - COMPRAR CARRITO ****
+
+let btnComprarCarrito = document.querySelector("#btn-comprarCarrito")
+btnComprarCarrito.addEventListener("click", eventoComprarCarrito)
+
+function eventoComprarCarrito(evento) {
+    evento.preventDefault()
+    
+    comprarCarrito()
+
+    controlBotones()
 }
 
 // **** ICONO MOSTRAR CARRITO ****

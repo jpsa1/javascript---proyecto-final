@@ -1,3 +1,4 @@
+//Lista elementos del carrito
 function nuevaFila (elemento) {
     let contenido = document.querySelector('#items')
 
@@ -45,6 +46,7 @@ function nuevaFila (elemento) {
 
 }
 
+//Lista elementos de la tienda
 function nuevoItem (elemento){
     let elem //Se usa para cargar los elementos
     

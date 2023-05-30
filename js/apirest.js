@@ -1,3 +1,4 @@
+//Archivo Json 
 async function cargarDatos() {
     const response = await fetch('./productos.json')
     const data = await response.json()

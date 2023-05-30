@@ -133,6 +133,24 @@ function vaciarCarrito() {
 
 };
 
+// **** Opcion 8: Comprar Carrito ****
+
+function comprarCarrito() {
+    
+    sweetAlert('info', 'Compra realizada', 'Tus productos llegaran a tu domicilio')
+    
+    carrito.splice(0,carrito.length)
+    
+    listarProductos() 
+
+    //Coloca la leyenda del total carrito en 0
+    totalCarrito()
+
+    visualMostrarCarrito('ocultar')
+
+
+}
+
     
 
 
